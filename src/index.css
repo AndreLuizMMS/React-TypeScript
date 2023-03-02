@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0.25rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: whitesmoke;
+  place-content: center;
+  font-size: 150%;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+  font-size: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gold {
+  color: gold;
+}
+
+.navbar {
+  height: 100px;
+  background-color: gray;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+ul {
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.React_TS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.count-box {
+  background: #292929;
+  width: 12rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.count {
+  font-size: 2rem;
+}
+
+.reactHooks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hooks {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.comment {
+  color: #646464;
+}
+
+.spec {
+  display: flex;
+}
+
+.useMemo {
+  margin-top: 1rem;
+}
+
+.fibInput {
+  background: #292929;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+
+  width: 10rem;
+  height: 4rem;
+  }
