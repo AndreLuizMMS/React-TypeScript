@@ -1,0 +1,19 @@
+Challenge 1 of 4: Dispatch actions from event handlers 
+
+Currently, the event handlers in {ContactList.js }and {Chat.js} have // TODO comments. This is why typing into the input doesn’t work, and clicking on the buttons doesn’t change the selected recipient.
+
+Replace these two // TODOs with the code to dispatch the corresponding actions. To see the expected shape and the type of the actions, check the reducer in {messengerReducer.js}. The reducer is already written so you won’t need to change it. You only need to dispatch the actions in {ContactList.js} and {Chat.js}.
+
+
+
+Challenge 2 of 4: Clear the input on sending a message 
+Currently, pressing “Send” doesn’t do anything. Add an event handler to the “Send” button that will:
+
+Show an alert with the recipient’s email and the message.
+Clear the message input.
+
+
+Challenge 3 of 4: Restore input values when switching between tabs 
+In this example, switching between different recipients always clears the text input:
+                   
+Your task is to change the way the state is structured so that you remember a separate message draft per contact. You would need to make a few changes to the reducer, the initial state, and the components.

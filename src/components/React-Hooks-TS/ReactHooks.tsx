@@ -1,7 +1,8 @@
-import { useEffect, useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 import UseCallback from './UseCallback';
 import UseMemo from './UseMemo';
+import Tasks from './useReducer/Tasks';
 
 type User = {
   id: number;
@@ -9,17 +10,15 @@ type User = {
 };
 
 const ReactHooks = () => {
-  const [users, setUsers] = useState<User[] | null>(null);
-
-  useEffect(() => {
-    console.log('Users: ', users);
-  }, [users]);
-
   return (
     <div className="reactHooks">
       <div className="hooks">
         <UseCallback />
         <UseMemo />
+        <Tasks />
+        <Link to="/ReactHooks/challenge" className="link">
+          useReducer Challenge
+        </Link>
       </div>
     </div>
   );
