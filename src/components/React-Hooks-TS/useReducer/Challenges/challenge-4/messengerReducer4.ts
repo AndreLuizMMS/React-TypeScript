@@ -1,3 +1,5 @@
+import { REDUCER_ACTION_TYPE } from '../messengeReducer';
+
 export const initialState = {
   selectedId: 0,
   messages: {
@@ -7,15 +9,17 @@ export const initialState = {
   }
 };
 
+const names = ['Taylor', 'Alice', 'Bob'];
+
 export function messengerReducer(state: any, action: any) {
   switch (action.type) {
-    case 'changed_selection': {
+    case REDUCER_ACTION_TYPE.changed_selection: {
       return {
         ...state,
         selectedId: action.contactId
       };
     }
-    case 'edited_message': {
+    case REDUCER_ACTION_TYPE.edited_message: {
       return {
         ...state,
         messages: {
@@ -24,7 +28,8 @@ export function messengerReducer(state: any, action: any) {
         }
       };
     }
-    case 'sent': {
+    case REDUCER_ACTION_TYPE.sent: {
+      alert(`message sent to ${names[state.selectedId]}`);
       return {
         ...state,
         messages: {

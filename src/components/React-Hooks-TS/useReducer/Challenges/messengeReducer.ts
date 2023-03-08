@@ -7,15 +7,27 @@ export const initialState = {
   }
 };
 
-export function messengerReducer(state: any, action: any) {
+export const enum REDUCER_ACTION_TYPE {
+  changed_selection,
+  edited_message,
+  sent
+}
+
+type reducerActions = {
+  type: REDUCER_ACTION_TYPE;
+  contactId?: number;
+  message: string;
+};
+
+export function messengerReducer(state: typeof initialState, action: reducerActions) {
   switch (action.type) {
-    case 'changed_selection': {
+    case REDUCER_ACTION_TYPE.changed_selection: {
       return {
         ...state,
         selectedId: action.contactId
       };
     }
-    case 'edited_message': {
+    case REDUCER_ACTION_TYPE.edited_message: {
       return {
         ...state,
         messages: {
@@ -24,7 +36,7 @@ export function messengerReducer(state: any, action: any) {
         }
       };
     }
-    case 'sent': {
+    case REDUCER_ACTION_TYPE.sent: {
       alert('Message sent');
       return {
         ...state,

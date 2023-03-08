@@ -2,6 +2,8 @@ import { Dispatch } from 'react';
 
 import { Contacts } from './Challenge';
 
+import { REDUCER_ACTION_TYPE } from './messengeReducer';
+
 type ContactListProps = {
   contacts: Contacts[];
   selectedId: number;
@@ -22,7 +24,10 @@ export default function ContactList({
               onClick={() => {
                 // TODO: dispatch changed_selection
                 console.log();
-                dispatch({ type: 'changed_selection', contactId: contact.id });
+                dispatch({
+                  type: REDUCER_ACTION_TYPE.changed_selection,
+                  contactId: contact.id
+                });
               }}
             >
               {selectedId === contact.id ? <b>{contact.name}</b> : contact.name}
